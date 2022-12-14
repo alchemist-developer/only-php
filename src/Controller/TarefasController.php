@@ -50,11 +50,11 @@ class TarefasController extends AppController
         if ($this->request->is('post')) {
             $tarefa = $this->Tarefas->patchEntity($tarefa, $this->request->getData());
             if ($this->Tarefas->save($tarefa)) {
-                $this->Flash->success(__('The tarefa has been saved.'));
+                $this->Flash->success(__('A tarefa foi salva.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The tarefa could not be saved. Please, try again.'));
+            $this->Flash->error(__('A tarefa não pôde ser salva, tente novamente.'));
         }
         $this->set(compact('tarefa'));
     }
@@ -74,11 +74,11 @@ class TarefasController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $tarefa = $this->Tarefas->patchEntity($tarefa, $this->request->getData());
             if ($this->Tarefas->save($tarefa)) {
-                $this->Flash->success(__('The tarefa has been saved.'));
+                $this->Flash->success(__('A tarefa foi salva.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The tarefa could not be saved. Please, try again.'));
+            $this->Flash->error(__('A tarefa não pôde ser salva, tente novamente.'));
         }
         $this->set(compact('tarefa'));
     }
@@ -95,9 +95,9 @@ class TarefasController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $tarefa = $this->Tarefas->get($id);
         if ($this->Tarefas->delete($tarefa)) {
-            $this->Flash->success(__('The tarefa has been deleted.'));
+            $this->Flash->success(__('Tarefa deletada com sucesso.'));
         } else {
-            $this->Flash->error(__('The tarefa could not be deleted. Please, try again.'));
+            $this->Flash->error(__('A tarefa não pôde ser deletada, tente novamente.'));
         }
 
         return $this->redirect(['action' => 'index']);
