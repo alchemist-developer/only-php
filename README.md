@@ -34,6 +34,14 @@ bin/cake server -p 8765
 
 Then visit `http://localhost:8765` to see the welcome page.
 
+## Routes
+
+Listar tarefas: http://localhost:8765/tarefas
+Adicionar tarefa: http://localhost:8765/tarefas/add
+Editar tarefa: http://localhost:8765/tarefas/edit/id
+Visualizar tarefa: http://localhost:8765/tarefas/view/id
+Deletar tarefa: http://localhost:8765/tarefas/view/id#
+
 ## Update
 
 Since this skeleton is a starting point for your application and various files
